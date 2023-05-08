@@ -4,6 +4,7 @@ import TextStyle from '@tiptap/extension-text-style'
 import { EditorContent, useEditor } from '@tiptap/react'
 import StarterKit from '@tiptap/starter-kit'
 import { useEffect } from 'react'
+import FontSize from 'tiptap-extension-font-size'
 
 const MenuBar = ({ editor }) => {
   if (!editor) {
@@ -64,6 +65,7 @@ const MenuBar = ({ editor }) => {
       >
         code
       </button>
+
       <button onClick={() => editor.chain().focus().unsetAllMarks().run()}>
         clear marks
       </button>
@@ -75,6 +77,12 @@ const MenuBar = ({ editor }) => {
         className={editor.isActive('paragraph') ? 'is-active' : ''}
       >
         paragraph
+      </button>
+      <button
+        onClick={() => editor.chain().focus().setFontSize('16pt').run()}
+        className={editor.isActive('heading', { level: 1 }) ? 'is-active' : ''}
+      >
+        16px
       </button>
       <button
         onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
@@ -193,6 +201,7 @@ const ReactTipTap = ({ value = "", onChange = () => { } }) => {
           keepAttributes: false,
         },
       }),
+      FontSize.configure(),
     ],
     onUpdate({ editor }) {
       onChange(editor.getHTML())

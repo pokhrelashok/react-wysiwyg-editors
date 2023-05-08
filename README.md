@@ -5,7 +5,7 @@ This repository contains React components for several popular WYSIWYG editors:
 ### [React Ckeditor5](src/components/ReactCk.jsx)
 
 ```
-npm i --save @ckeditor/ckeditor5-build-classic @ckeditor/ckeditor5-react
+npm i --save ckeditor5-essentials-build @ckeditor/ckeditor5-react
 ```
 
 ### [React Draft](src/components/ReactDraft.jsx)
@@ -29,5 +29,5 @@ npm i --save @tinymce/tinymce-react
 ### [React TipTap](src/components/ReactTipTap.jsx)
 
 ```
-npm i --save @tiptap/extension-color @tiptap/extension-text-style @tiptap/pm @tiptap/react @tiptap/starter-kit
+npm i --save @tiptap/extension-color @tiptap/extension-text-style @tiptap/pm @tiptap/react @tiptap/starter-kit @tiptap/extension-font-family tiptap-extension-font-size
 ```

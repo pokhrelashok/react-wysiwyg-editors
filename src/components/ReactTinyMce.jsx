@@ -29,6 +29,7 @@ function ReactTinyMce({ value = '', onChange = () => { } }) {
           'alignright alignjustify | bullist numlist outdent indent | ' +
           'removeformat | help',
         fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+        branding: false,
         content_style: 'body { font-family:TImes New Roman,Arial,sans-serif; font-size:14px }',
         // setup: function (editor) {
         //   console.log(editor)

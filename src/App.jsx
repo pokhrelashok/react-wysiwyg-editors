@@ -17,9 +17,9 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setCkVal(html)
+      setCkVal(`<h2><span style="background-color:hsl(30, 75%, 60%);color:hsl(0, 0%, 100%);"><code class="ck-code_selected"><i><s><strong><u>Hello World</u></strong></s></i></code></span></h2>`)
       setTinyVal(html)
-      setTipTapVal(html)
+      setTipTapVal(`<p><span style="color: red; font-size: 16pt"><strong><em><s>Hello World</s></em></strong></span></p>`)
       setDraftVal(html)
       setQuillVal(html)
     }, 2000)
