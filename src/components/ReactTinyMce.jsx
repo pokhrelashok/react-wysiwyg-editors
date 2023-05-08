@@ -25,10 +25,11 @@ function ReactTinyMce({ value = '', onChange = () => { } }) {
           'insertdatetime', 'media', 'table', 'code', 'help', 'wordcount'
         ],
         toolbar: 'undo redo | blocks | ' +
-          'bold italic forecolor | alignleft aligncenter ' +
+          'bold italic forecolor fontfamily fontsize | alignleft aligncenter ' +
           'alignright alignjustify | bullist numlist outdent indent | ' +
           'removeformat | help',
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+        fontsize_formats: '8pt 10pt 12pt 14pt 18pt 24pt 36pt',
+        content_style: 'body { font-family:TImes New Roman,Arial,sans-serif; font-size:14px }',
         // setup: function (editor) {
         //   console.log(editor)
         //   editor.ui.registry.addButton('customInsertButton', {
