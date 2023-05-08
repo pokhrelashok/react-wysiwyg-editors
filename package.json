@@ -12,18 +12,18 @@
   "dependencies": {
     "@ckeditor/ckeditor5-build-classic": "^37.1.0",
     "@ckeditor/ckeditor5-react": "^6.0.0",
-    "@editorjs/editorjs": "^2.26.5",
-    "@editorjs/paragraph": "^2.9.0",
     "@tinymce/tinymce-react": "^4.3.0",
     "@tiptap/extension-color": "^2.0.3",
     "@tiptap/extension-text-style": "^2.0.3",
     "@tiptap/pm": "^2.0.3",
     "@tiptap/react": "^2.0.3",
     "@tiptap/starter-kit": "^2.0.3",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-editor-js": "^2.1.0",
-    "slate-react": "^0.94.0"
+    "draft-convert": "^2.1.13",
+    "draft-js": "^0.11.7",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-quill": "^2.0.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",

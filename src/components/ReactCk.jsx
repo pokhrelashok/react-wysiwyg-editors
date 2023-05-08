@@ -1,8 +1,7 @@
-import React from 'react';
 import { CKEditor } from '@ckeditor/ckeditor5-react';
 import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
-const CkeEditor = ({ value = "", onChange = () => { } }) => {
+const ReactCk = ({ value = "", onChange = () => { } }) => {
   return (<CKEditor
     editor={ClassicEditor}
     data={value}
@@ -13,4 +12,4 @@ const CkeEditor = ({ value = "", onChange = () => { } }) => {
   />
   );
 }
-export default CkeEditor;
+export default ReactCk;

@@ -178,7 +178,7 @@ const MenuBar = ({ editor }) => {
   )
 }
 
-const TipTap = ({ value = "", onChange = () => { } }) => {
+const ReactTipTap = ({ value = "", onChange = () => { } }) => {
   const editor = useEditor({
     extensions: [
       Color.configure({ types: [TextStyle.name, ListItem.name] }),
@@ -212,4 +212,4 @@ const TipTap = ({ value = "", onChange = () => { } }) => {
   )
 }
 
-export default TipTap;
+export default ReactTipTap;

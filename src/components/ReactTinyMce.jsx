@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Editor } from '@tinymce/tinymce-react';
 
-function TinyMce({ value = '', onChange = () => { } }) {
+function ReactTinyMce({ value = '', onChange = () => { } }) {
   const [editorValue, setEditorValue] = useState(value);
-
   useEffect(() => {
-    console.log(value)
     setEditorValue(value);
   }, [value]);
 
@@ -13,10 +11,9 @@ function TinyMce({ value = '', onChange = () => { } }) {
     setEditorValue(content)
     onChange(content);
   };
-
   return (
     <Editor
-      apiKey={"mxpxaa6zj2sj7zknftbzzl6ngnrda70x1dh2oq771bgynlk9"}
+      apiKey={import.meta.env.VITE_TINY_MCE_API_KEY}
       value={editorValue}
       onEditorChange={handleEditorChange}
       init={{
@@ -31,10 +28,19 @@ function TinyMce({ value = '', onChange = () => { } }) {
           'bold italic forecolor | alignleft aligncenter ' +
           'alignright alignjustify | bullist numlist outdent indent | ' +
           'removeformat | help',
-        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+        content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }',
+        // setup: function (editor) {
+        //   console.log(editor)
+        //   editor.ui.registry.addButton('customInsertButton', {
+        //     text: 'My Button',
+        //     onAction: function (_) {
+        //       editor.insertContent('&nbsp;<strong>It\'s my button!</strong>&nbsp;');
+        //     }
+        //   });
+        // },
       }}
     />
   );
 }
 
-export default TinyMce;
+export default ReactTinyMce;
